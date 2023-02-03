@@ -1,7 +1,0 @@
----
-layout: null
-permalink: /api/repos-metadata.json
----
-
-
-{{ site.data.data.latest.cci-repo_metadata | jsonify }}

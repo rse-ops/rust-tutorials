@@ -1,7 +1,0 @@
----
-layout: null
-permalink: /api/topics.json
----
-
-
-{{ site.data.data.latest.cci-topics | jsonify }}

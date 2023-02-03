@@ -1,5 +1,0 @@
----
-layout: null
-permalink: /api/tutorials.json
----
-{{ site.data.tutorials | jsonify }}
