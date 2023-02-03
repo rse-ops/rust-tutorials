@@ -14,7 +14,6 @@ RUN apt-get update && apt-get install -y supervisor curl g++ && \
     /bin/bash -c "curl https://sh.rustup.rs -sSf | sh -s -- -y"
 
 RUN useradd --create-home --shell /bin/bash ${USER}
-USER ${USER}
 
 COPY --chown=${USERNAME}:${USERNAME} ./lessons/ $HOME/tutorial/
 
@@ -26,7 +25,6 @@ RUN curl -L https://github.com/gitpod-io/openvscode-server/releases/download/ope
 RUN tar xzf openvscode-server-v1.69.1-linux-x64.tar.gz && chown -R ${USER}:${USER} openvscode-server-v1.69.1-linux-x64
 ENV PATH=/opt/archives/openvscode-server-v1.69.1-linux-x64/bin:$PATH
 
-USER root
 RUN openvscode-server --install-extension vadimcn.vscode-lldb && \
     openvscode-server --install-extension tamasfe.even-better-toml && \
     openvscode-server --install-extension serayuzgur.crates && \

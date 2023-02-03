@@ -6,7 +6,7 @@ resources:
   cpus: 1
 
 container:
-  name: ghcr.io/rse-ops/rust-tutorials-hello-world:latest
+  name: ghcr.io/rse-ops/rust-hello-world:ubuntu-20.04
 
   # All ports provided
   # Tutorials will also expose 443 and 80 by default
